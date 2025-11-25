@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Rafi</title>
+  <meta name="description" content="Portofolio pribadi — nama, proyek, kontak." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="logo">RA</div>
+        <div>
+          <div style="font-weight: 800">rafii</div>
+          <div class="muted" style="font-size: 13px">
+            Web Developer • UI/UX • Freelancer
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main>
+      <div class="hero">
+
+        <!-- BAGIAN KIRI -->
+        <div class="intro card">
+
+          <h1>Hai — saya <span style="color: var(--accent)">rafi</span></h1>
+          <p class="muted">
+            Saya membuat aplikasi web modern, UI bersih, dan pengalaman yang mudah dipakai.
+          </p>
+
+          <!-- ABOUT -->
+          <section id="about" style="margin-top: 20px">
+            <h2>Tentang saya</h2>
+            <p class="muted">
+              Saya memiliki pengalaman 3+ tahun membangun produk digital dari konsep hingga rilis.
+            </p>
+            <strong>Kontak cepat:</strong>
+            <span class="muted">rafilmj11@gmail.com • +62 857 3561 4212</span>
+          </section>
+
+          <!-- PROJECTS -->
+          <section id="projects" style="margin-top: 28px">
+            <h2>Proyek</h2>
+
+            <div class="projects-grid">
+              <div class="project" onclick="openProject(1)">
+                <img src="avoider.jpeg" />
+                <h3>Robot Avoider</h3>
+              </div>
+
+              <div class="project" onclick="openProject(2)">
+                <img src="smarthome.jpeg" />
+                <h3>Smart Home</h3>
+              </div>
+
+              <div class="project" onclick="openProject(3)">
+                <img src="pengukur.jpeg" />
+                <h3>Pengukur jarak</h3>
+              </div>
+            </div>
+          </section>
+
+          <!-- CONTACT -->
+          <section id="contact" style="margin-top: 28px">
+            <h2>Kontak</h2>
+
+            <div class="card" style="display: flex; gap: 20px; flex-wrap: wrap">
+              
+              <!-- FORM -->
+              <form id="contactForm" style="flex: 1; min-width:260px">
+                <label>Nama</label>
+                <input id="name" required
+                  style="width: 100%; padding: 10px; background: rgba(255,255,255,0.03);
+                  border:0; border-radius:10px; color:white" />
+
+                <label style="margin-top:10px">Email</label>
+                <input id="email" type="email" required
+                  style="width: 100%; padding: 10px; background: rgba(255,255,255,0.03);
+                  border:0; border-radius:10px; color:white" />
+
+                <label style="margin-top:10px">Pesan</label>
+                <textarea id="message" rows="4"
+                  style="width: 100%; padding: 10px; background: rgba(255,255,255,0.03);
+                  border:0; border-radius:10px; color:white"></textarea>
+
+                <button class="btn btn-primary" type="submit" style="margin-top:10px">Kirim</button>
+              </form>
+
+              <!-- INFO & MAP -->
+              <div style="min-width: 260px">
+                <strong>Hubungi via</strong>
+                <p class="muted">
+                  rafilmj11@gmail.com<br />
+                  +62 857 3561 4212
+                </p>
+
+                <h3 style="margin-top: 20px">Lokasi</h3>
+
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d246.80912820916015!2d113.11121302898876!3d-8.208180352017306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1763967821192!5m2!1sen!2sid"
+                  width="100%"
+                  height="200"
+                  style="border:0; border-radius:12px; margin-top:10px"
+                  allowfullscreen=""
+                  loading="lazy">
+                </iframe>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- BAGIAN KANAN (SIDEBAR) -->
+        <aside class="card" style="text-align: center">
+          <img src="rafi.jpeg"
+               style="width: 120px; height: 120px; border-radius: 16px; object-fit: cover" />
+
+          <h3>Rafi Ardiansyah</h3>
+          <p class="muted">Front-end Developer</p>
+
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Figma</div>
+          </div>
+
+          <!-- SOSIAL MEDIA -->
+          <h3 style="margin-top: 20px">Sosial Media</h3>
+
+          <div style="display:flex; justify-content:center; gap:12px; margin-top:10px; font-size:20px;">
+            <a href="https://www.instagram.com/rafiiegii"
+               target="_blank" style="color:white;">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@iam_fii.xo"
+               target="_blank" style="color:white;">
+              <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://youtube.com/@rafiardiansyahegiramadhan?si=OuiL4lmQ4udP2WO0"
+               target="_blank" style="color:white;">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </main>
+
+    <footer>
+      ©️ <span id="year"></span> Egiiii
+    </footer>
+
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-card">
+      <button onclick="closeModal()" style="float:right; background:none; border:0; color:white">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
